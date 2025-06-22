@@ -67,7 +67,7 @@ jobs:
           echo "YOUTUBE_MUSIC_URL=$YOUTUBE_MUSIC_URL" >> $GITHUB_OUTPUT
           
           # Create formatted date for badges
-          FORMATTED_DATE=$(echo "$BUILD_DATE" | sed 's/ /%20/g; s/:/%3A/g; s/+/%2B/g; s/-/%2D/g')
+          FORMATTED_DATE=$(echo "$BUILD_DATE" | sed 's/ /%20/g; s/:/%3A/g; s/+/%2B/g')
           FORMATTED_BUILD_ID=$(echo "$BUILD_ID" | sed 's/-/--/g')
           echo "FORMATTED_DATE=$FORMATTED_DATE" >> $GITHUB_OUTPUT
           echo "FORMATTED_BUILD_ID=$FORMATTED_BUILD_ID" >> $GITHUB_OUTPUT
