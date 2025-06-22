@@ -1,7 +1,7 @@
 # 🎯 Always-Up-to-Date ReVanced Apps
 
 [![Latest Build](https://img.shields.io/badge/Build-20250622--042157--ccd663db-blue)](https://cdn.rei.my.id/revanced/)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-2025--06--22T04%3A24%3A59Z-green)](https://cdn.rei.my.id/revanced/latest-manifest.json)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-2025-06-22T04%3A24%3A59Z-green)](https://cdn.rei.my.id/revanced/latest-manifest.json)
 
 > **Automatically built and maintained via continuous integration. Never miss a new version!**
 
@@ -25,7 +25,7 @@ This repository provides automatically updated ReVanced applications, ensuring y
 🔄 **Auto-Updated**: GitHub Actions workflow maintains this README with latest info  
 📦 **Direct Downloads**: One-click access to the newest builds  
 🛡️ **Reliable**: Continuous integration ensures consistent availability  
-📊 **Transparent**: Build information and commit hashes for full traceability
+📊 **Transparent**: Build information and commit hashes for full traceability  
 
 ## 📋 Build Information
 
@@ -65,13 +65,13 @@ While this repository is primarily automated, contributions for improving the wo
 ```
            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
                    Version 2, December 2024
- 
+
 Copyright (C) 2024 Reidho Satria <me@rei.my.id>
 
 Everyone is permitted to copy and distribute verbatim or modified
 copies of this license document, and changing it is allowed as long
 as the name is changed.
- 
+
            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
