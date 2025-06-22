@@ -1,0 +1,208 @@
+name: Update ReVanced Apps Information
+
+on:
+  schedule:
+    # Run once a week (every Sunday at 00:00 UTC)
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+    # Allow manual trigger
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Fetch latest manifest
+        id: fetch-manifest
+        run: |
+          echo "Fetching latest manifest..."
+          curl -s https://cdn.rei.my.id/revanced/latest-manifest.json > manifest.json
+          
+          # Extract values using jq
+          BUILD_ID=$(jq -r '.build_id' manifest.json)
+          BUILD_DATE=$(jq -r '.build_date' manifest.json)
+          WORKFLOW_RUN_ID=$(jq -r '.workflow_run_id' manifest.json)
+          WORKFLOW_RUN_NUMBER=$(jq -r '.workflow_run_number' manifest.json)
+          COMMIT_SHA=$(jq -r '.commit_sha' manifest.json)
+          
+          # YouTube App Info
+          YOUTUBE_VERSION=$(jq -r '.applications.youtube.version' manifest.json)
+          YOUTUBE_FILENAME=$(jq -r '.applications.youtube.filename' manifest.json)
+          YOUTUBE_URL=$(jq -r '.applications.youtube.url' manifest.json)
+          
+          # YouTube Music App Info
+          YOUTUBE_MUSIC_VERSION=$(jq -r '.applications.youtube_music.version' manifest.json)
+          YOUTUBE_MUSIC_FILENAME=$(jq -r '.applications.youtube_music.filename' manifest.json)
+          YOUTUBE_MUSIC_URL=$(jq -r '.applications.youtube_music.url' manifest.json)
+          
+          # Set outputs
+          echo "BUILD_ID=$BUILD_ID" >> $GITHUB_OUTPUT
+          echo "BUILD_DATE=$BUILD_DATE" >> $GITHUB_OUTPUT
+          echo "WORKFLOW_RUN_ID=$WORKFLOW_RUN_ID" >> $GITHUB_OUTPUT
+          echo "WORKFLOW_RUN_NUMBER=$WORKFLOW_RUN_NUMBER" >> $GITHUB_OUTPUT
+          echo "COMMIT_SHA=$COMMIT_SHA" >> $GITHUB_OUTPUT
+          echo "YOUTUBE_VERSION=$YOUTUBE_VERSION" >> $GITHUB_OUTPUT
+          echo "YOUTUBE_FILENAME=$YOUTUBE_FILENAME" >> $GITHUB_OUTPUT
+          echo "YOUTUBE_URL=$YOUTUBE_URL" >> $GITHUB_OUTPUT
+          echo "YOUTUBE_MUSIC_VERSION=$YOUTUBE_MUSIC_VERSION" >> $GITHUB_OUTPUT
+          echo "YOUTUBE_MUSIC_FILENAME=$YOUTUBE_MUSIC_FILENAME" >> $GITHUB_OUTPUT
+          echo "YOUTUBE_MUSIC_URL=$YOUTUBE_MUSIC_URL" >> $GITHUB_OUTPUT
+          
+          # Create formatted date for badges
+          FORMATTED_DATE=$(echo "$BUILD_DATE" | sed 's/:/%3A/g')
+          FORMATTED_BUILD_ID=$(echo "$BUILD_ID" | sed 's/-/--/g')
+          echo "FORMATTED_DATE=$FORMATTED_DATE" >> $GITHUB_OUTPUT
+          echo "FORMATTED_BUILD_ID=$FORMATTED_BUILD_ID" >> $GITHUB_OUTPUT
+          
+          echo "Successfully extracted manifest data"
+          
+      - name: Update README.md
+        run: |
+          cat > README.md << 'EOF'
+          # 🎯 Always-Up-to-Date ReVanced Apps
+
+          [![Auto Update](https://github.com/${{ github.repository }}/actions/workflows/update_revanced.yml/badge.svg)](https://github.com/${{ github.repository }}/actions/workflows/update_revanced.yml)
+          [![Latest Build](https://img.shields.io/badge/Build-${{ steps.fetch-manifest.outputs.FORMATTED_BUILD_ID }}-blue)](https://cdn.rei.my.id/revanced/)
+          [![Last Updated](https://img.shields.io/badge/Last%20Updated-${{ steps.fetch-manifest.outputs.FORMATTED_DATE }}-green)](https://cdn.rei.my.id/revanced/latest-manifest.json)
+
+          > **Automatically built and maintained via continuous integration. Never miss a new version!**
+
+          This repository provides automatically updated ReVanced applications, ensuring you always have access to the latest patched versions without manual intervention.
+
+          ## 📱 Available Applications
+
+          ### 🎥 YouTube ReVanced
+          - **Version**: `${{ steps.fetch-manifest.outputs.YOUTUBE_VERSION }}`
+          - **Build Date**: `${{ steps.fetch-manifest.outputs.BUILD_DATE }}`
+          - **Download**: [${{ steps.fetch-manifest.outputs.YOUTUBE_FILENAME }}](${{ steps.fetch-manifest.outputs.YOUTUBE_URL }})
+
+          ### 🎵 YouTube Music ReVanced
+          - **Version**: `${{ steps.fetch-manifest.outputs.YOUTUBE_MUSIC_VERSION }}`
+          - **Build Date**: `${{ steps.fetch-manifest.outputs.BUILD_DATE }}`
+          - **Download**: [${{ steps.fetch-manifest.outputs.YOUTUBE_MUSIC_FILENAME }}](${{ steps.fetch-manifest.outputs.YOUTUBE_MUSIC_URL }})
+
+          ## 🚀 Features
+
+          ✨ **Always Current**: Automatically checks for new versions once a week  
+          🔄 **Auto-Updated**: GitHub Actions workflow maintains this README with latest info  
+          📦 **Direct Downloads**: One-click access to the newest builds  
+          🛡️ **Reliable**: Continuous integration ensures consistent availability  
+          📊 **Transparent**: Build information and commit hashes for full traceability  
+
+          ## 📋 Build Information
+
+          - **Build ID**: `${{ steps.fetch-manifest.outputs.BUILD_ID }}`
+          - **Workflow Run**: `#${{ steps.fetch-manifest.outputs.WORKFLOW_RUN_NUMBER }}` (ID: `${{ steps.fetch-manifest.outputs.WORKFLOW_RUN_ID }}`)
+          - **Commit SHA**: `${{ steps.fetch-manifest.outputs.COMMIT_SHA }}`
+          - **Last Update**: `${{ steps.fetch-manifest.outputs.BUILD_DATE }}`
+
+          ## 📖 Installation Instructions
+
+          1. **Enable Unknown Sources**: Go to Settings > Security > Unknown Sources (Android)
+          2. **Download**: Click on the download links above for your desired app
+          3. **Install**: Open the downloaded APK file and follow the installation prompts
+          4. **Enjoy**: Launch your newly patched application!
+
+          ## 🔄 Automatic Updates
+
+          This repository is automatically updated once a week by a GitHub Actions workflow that:
+          - Fetches the latest manifest from the CDN
+          - Checks for version updates
+          - Updates download links and build information
+          - Commits changes automatically when new versions are detected
+
+          ## 📊 Status
+
+          - **Automation**: ✅ Active
+          - **Last Check**: Auto-updated via GitHub Actions
+          - **Next Check**: Once a week (Sundays at 00:00 UTC)
+          - **Manifest Source**: [latest-manifest.json](https://cdn.rei.my.id/revanced/latest-manifest.json)
+
+          ## 🤝 Contributing
+
+          While this repository is primarily automated, contributions for improving the workflow or documentation are welcome via pull requests.
+
+          ## 📜 License
+
+          ```
+                     DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+                             Version 2, December 2024
+
+          Copyright (C) 2024 Reidho Satria <me@rei.my.id>
+
+          Everyone is permitted to copy and distribute verbatim or modified
+          copies of this license document, and changing it is allowed as long
+          as the name is changed.
+
+                     DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+            TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+           0. You just DO WHAT THE FUCK YOU WANT TO.
+          ```
+
+          ---
+
+          *This README is automatically updated by GitHub Actions. Last updated: ${{ steps.fetch-manifest.outputs.BUILD_DATE }}*
+          EOF
+          
+      - name: Check for changes
+        id: verify-changed-files
+        run: |
+          if git diff --quiet; then
+            echo "No changes detected"
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected"
+            echo "changed=true" >> $GITHUB_OUTPUT
+            git diff --name-only
+          fi
+          
+      - name: Commit and push changes
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "🤖 Auto-update ReVanced apps information
+          
+          - YouTube: ${{ steps.fetch-manifest.outputs.YOUTUBE_VERSION }}
+          - YouTube Music: ${{ steps.fetch-manifest.outputs.YOUTUBE_MUSIC_VERSION }}
+          - Build ID: ${{ steps.fetch-manifest.outputs.BUILD_ID }}
+          - Updated: ${{ steps.fetch-manifest.outputs.BUILD_DATE }}"
+          git push
+          
+      - name: Summary
+        run: |
+          echo "## 📱 ReVanced Update Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Application | Version | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------------|---------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| YouTube | \`${{ steps.fetch-manifest.outputs.YOUTUBE_VERSION }}\` | ✅ Updated |" >> $GITHUB_STEP_SUMMARY
+          echo "| YouTube Music | \`${{ steps.fetch-manifest.outputs.YOUTUBE_MUSIC_VERSION }}\` | ✅ Updated |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Build Information:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Build ID: \`${{ steps.fetch-manifest.outputs.BUILD_ID }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- Build Date: \`${{ steps.fetch-manifest.outputs.BUILD_DATE }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- Changes Detected: ${{ steps.verify-changed-files.outputs.changed }}" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "${{ steps.verify-changed-files.outputs.changed }}" == "true" ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "✅ **README.md has been updated with the latest information!**" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "ℹ️ **No changes needed - README.md is already up to date.**" >> $GITHUB_STEP_SUMMARY
+          fi
