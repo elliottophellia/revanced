@@ -14,12 +14,16 @@ on:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
           
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -75,7 +79,6 @@ jobs:
           cat > README.md << 'EOF'
           # 🎯 Always-Up-to-Date ReVanced Apps
 
-          [![Auto Update](https://github.com/${{ github.repository }}/actions/workflows/update_revanced.yml/badge.svg)](https://github.com/${{ github.repository }}/actions/workflows/update_revanced.yml)
           [![Latest Build](https://img.shields.io/badge/Build-${{ steps.fetch-manifest.outputs.FORMATTED_BUILD_ID }}-blue)](https://cdn.rei.my.id/revanced/)
           [![Last Updated](https://img.shields.io/badge/Last%20Updated-${{ steps.fetch-manifest.outputs.FORMATTED_DATE }}-green)](https://cdn.rei.my.id/revanced/latest-manifest.json)
 
@@ -170,12 +173,12 @@ jobs:
             echo "changed=true" >> $GITHUB_OUTPUT
             git diff --name-only
           fi
-          
+      
       - name: Commit and push changes
         if: steps.verify-changed-files.outputs.changed == 'true'
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add README.md
           git commit -m "🤖 Auto-update ReVanced apps information
           

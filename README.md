@@ -1,6 +1,5 @@
 # 🎯 Always-Up-to-Date ReVanced Apps
 
-[![Auto Update](https://github.com/rei/revanced/actions/workflows/update_revanced.yml/badge.svg)](https://github.com/rei/revanced/actions/workflows/update_revanced.yml)
 [![Latest Build](https://img.shields.io/badge/Build-20250622--042157--ccd663db-blue)](https://cdn.rei.my.id/revanced/)
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-2025--06--22T04%3A24%3A59Z-green)](https://cdn.rei.my.id/revanced/latest-manifest.json)
 
