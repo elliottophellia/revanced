@@ -1,7 +1,7 @@
 # 🎯 Always-Up-to-Date ReVanced Apps
 
-[![Latest Build](https://img.shields.io/badge/Build-20250630--032624--bfaee660-blue)](https://cdn.rei.my.id/revanced/)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-2025--06--30T03%3A29%3A34Z-green)](https://cdn.rei.my.id/revanced/latest-manifest.json)
+[![Latest Build](https://img.shields.io/badge/Build-20250713--013937--fd8d8846-blue)](https://cdn.rei.my.id/revanced/)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-2025--07--13T01%3A40%3A00Z-green)](https://cdn.rei.my.id/revanced/latest-manifest.json)
 
 > **Automatically built and maintained via continuous integration. Never miss a new version!**
 
@@ -11,12 +11,12 @@ This repository provides automatically updated ReVanced applications, ensuring y
 
 ### 🎥 YouTube ReVanced
 - **Version**: `20.13.41`
-- **Build Date**: `2025-06-30T03:29:34Z`
+- **Build Date**: `2025-07-13T01:40:00Z`
 - **Download**: [rei_YouTube_v20.13.41.apk](https://cdn.rei.my.id/revanced/rei_YouTube_v20.13.41.apk)
 
 ### 🎵 YouTube Music ReVanced
 - **Version**: `8.05.51`
-- **Build Date**: `2025-06-30T03:29:34Z`
+- **Build Date**: `2025-07-13T01:40:00Z`
 - **Download**: [rei_YoutubeMusic_v8.05.51.apk](https://cdn.rei.my.id/revanced/rei_YoutubeMusic_v8.05.51.apk)
 
 ## 🚀 Features
@@ -29,10 +29,10 @@ This repository provides automatically updated ReVanced applications, ensuring y
 
 ## 📋 Build Information
 
-- **Build ID**: `20250630-032624-bfaee660`
-- **Workflow Run**: `#14` (ID: `15963114230`)
-- **Commit SHA**: `4460e387888369f01584841bd4e0ffc5ffaf11e0`
-- **Last Update**: `2025-06-30T03:29:34Z`
+- **Build ID**: `20250713-013937-fd8d8846`
+- **Workflow Run**: `#17` (ID: `16244049145`)
+- **Commit SHA**: `57fc981869022aa6c9e0e2a906e59249ce459fd1`
+- **Last Update**: `2025-07-13T01:40:00Z`
 
 ## 📖 Installation Instructions
 
@@ -80,4 +80,4 @@ as the name is changed.
 
 ---
 
-*This README is automatically updated by GitHub Actions. Last updated: 2025-06-30T03:29:34Z*
+*This README is automatically updated by GitHub Actions. Last updated: 2025-07-13T01:40:00Z*
