@@ -1,7 +1,7 @@
 # 🎯 Always-Up-to-Date ReVanced Apps
 
-[![Latest Build](https://img.shields.io/badge/Build-20250719--012219--468b027b-blue)](https://cdn.rei.my.id/revanced/)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-2025--07--19T01%3A22%3A41Z-green)](https://cdn.rei.my.id/revanced/latest-manifest.json)
+[![Latest Build](https://img.shields.io/badge/Build-20250723--090850--2aaa1dca-blue)](https://cdn.rei.my.id/revanced/)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-2025--07--23T09%3A12%3A39Z-green)](https://cdn.rei.my.id/revanced/latest-manifest.json)
 
 > **Automatically built and maintained via continuous integration. Never miss a new version!**
 
@@ -11,13 +11,13 @@ This repository provides automatically updated ReVanced applications, ensuring y
 
 ### 🎥 YouTube ReVanced
 - **Version**: `20.13.41`
-- **Build Date**: `2025-07-19T01:22:41Z`
+- **Build Date**: `2025-07-23T09:12:39Z`
 - **Download**: [rei_YouTube_v20.13.41.apk](https://cdn.rei.my.id/revanced/rei_YouTube_v20.13.41.apk)
 
 ### 🎵 YouTube Music ReVanced
-- **Version**: `8.05.51`
-- **Build Date**: `2025-07-19T01:22:41Z`
-- **Download**: [rei_YoutubeMusic_v8.05.51.apk](https://cdn.rei.my.id/revanced/rei_YoutubeMusic_v8.05.51.apk)
+- **Version**: `8.12.53`
+- **Build Date**: `2025-07-23T09:12:39Z`
+- **Download**: [rei_YoutubeMusic_v8.12.53.apk](https://cdn.rei.my.id/revanced/rei_YoutubeMusic_v8.12.53.apk)
 
 ## 🚀 Features
 
@@ -29,10 +29,10 @@ This repository provides automatically updated ReVanced applications, ensuring y
 
 ## 📋 Build Information
 
-- **Build ID**: `20250719-012219-468b027b`
-- **Workflow Run**: `#23` (ID: `16383389183`)
-- **Commit SHA**: `57fc981869022aa6c9e0e2a906e59249ce459fd1`
-- **Last Update**: `2025-07-19T01:22:41Z`
+- **Build ID**: `20250723-090850-2aaa1dca`
+- **Workflow Run**: `#29` (ID: `16466429604`)
+- **Commit SHA**: `52d77780a5b7e11a24957529db8810d3b888bd70`
+- **Last Update**: `2025-07-23T09:12:39Z`
 
 ## 📖 Installation Instructions
 
@@ -80,4 +80,4 @@ as the name is changed.
 
 ---
 
-*This README is automatically updated by GitHub Actions. Last updated: 2025-07-19T01:22:41Z*
+*This README is automatically updated by GitHub Actions. Last updated: 2025-07-23T09:12:39Z*
