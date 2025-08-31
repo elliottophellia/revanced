@@ -1,7 +1,7 @@
 # 🎯 Always-Up-to-Date ReVanced Apps
 
-[![Latest Build](https://img.shields.io/badge/Build-20250723--090850--2aaa1dca-blue)](https://cdn.rei.my.id/revanced/)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-2025--07--23T09%3A12%3A39Z-green)](https://cdn.rei.my.id/revanced/latest-manifest.json)
+[![Latest Build](https://img.shields.io/badge/Build-20250828--100308--92cd812d-blue)](https://cdn.rei.my.id/revanced/)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-2025--08--28T10%3A07%3A01Z-green)](https://cdn.rei.my.id/revanced/latest-manifest.json)
 
 > **Automatically built and maintained via continuous integration. Never miss a new version!**
 
@@ -11,12 +11,12 @@ This repository provides automatically updated ReVanced applications, ensuring y
 
 ### 🎥 YouTube ReVanced
 - **Version**: `20.13.41`
-- **Build Date**: `2025-07-23T09:12:39Z`
+- **Build Date**: `2025-08-28T10:07:01Z`
 - **Download**: [rei_YouTube_v20.13.41.apk](https://cdn.rei.my.id/revanced/rei_YouTube_v20.13.41.apk)
 
 ### 🎵 YouTube Music ReVanced
 - **Version**: `8.12.53`
-- **Build Date**: `2025-07-23T09:12:39Z`
+- **Build Date**: `2025-08-28T10:07:01Z`
 - **Download**: [rei_YoutubeMusic_v8.12.53.apk](https://cdn.rei.my.id/revanced/rei_YoutubeMusic_v8.12.53.apk)
 
 ## 🚀 Features
@@ -29,10 +29,10 @@ This repository provides automatically updated ReVanced applications, ensuring y
 
 ## 📋 Build Information
 
-- **Build ID**: `20250723-090850-2aaa1dca`
-- **Workflow Run**: `#29` (ID: `16466429604`)
+- **Build ID**: `20250828-100308-92cd812d`
+- **Workflow Run**: `#66` (ID: `17292518142`)
 - **Commit SHA**: `52d77780a5b7e11a24957529db8810d3b888bd70`
-- **Last Update**: `2025-07-23T09:12:39Z`
+- **Last Update**: `2025-08-28T10:07:01Z`
 
 ## 📖 Installation Instructions
 
@@ -80,4 +80,4 @@ as the name is changed.
 
 ---
 
-*This README is automatically updated by GitHub Actions. Last updated: 2025-07-23T09:12:39Z*
+*This README is automatically updated by GitHub Actions. Last updated: 2025-08-28T10:07:01Z*
