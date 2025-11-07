@@ -1,5 +1,4 @@
-<div align="center">master
-
+<div align="center">
 ![Counter](https://api.sefinek.net/api/v2/moecounter/@revanced?length=7&theme=default&pixelated=false)
 
 # 🎬 ReVanced Applications
