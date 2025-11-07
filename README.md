@@ -1,8 +1,11 @@
-<div align="center">
+<div align="center">master
+
+![Counter](https://api.sefinek.net/api/v2/moecounter/@revanced?length=7&theme=default&pixelated=false)
 
 # 🎬 ReVanced Applications
 
-*Always-up-to-date ReVanced apps, automatically built and maintained via continuous integration. Never miss a new version.*
+*Always-up-to-date ReVanced apps, automatically built and maintained via continuous integration.* <br/>
+*Never miss a new version.*
 
 [![YouTube](https://img.shields.io/badge/YouTube-20.14.43-red?style=for-the-badge&logo=youtube&logoColor=white)](https://cdn.rei.my.id/revanced/rei_YouTube_v20.14.43.apk)
 [![YouTube Extended](https://img.shields.io/badge/YouTube_Extended-20.05.46-ff0000?style=for-the-badge&logo=youtube&logoColor=white)](https://cdn.rei.my.id/revanced/rei_YouTube_Extended_v20.05.46.apk)
@@ -111,7 +114,7 @@
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 Version 2, December 2004
 
-Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
+Copyright (C) 2024 Reidho Satria <me@rei.my.id>
 
 Everyone is permitted to copy and distribute verbatim or modified
 copies of this license document, and changing it is allowed as long
