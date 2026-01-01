@@ -1,0 +1,16 @@
+name: Clean Workflow Logs
+
+on:
+  schedule:
+    - cron: "0 0 * * 1" # Runs "At 00:00 on Monday." (see https://crontab.guru)
+
+jobs:
+  clean-logs:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - uses: igorjs/gh-actions-clean-workflow@v6
+        with:
+          runs_older_than: "7" # optional, default value: "7"
+          runs_to_keep: "0" # optional, default value: "0"
