@@ -17,7 +17,7 @@
 
 ![ReVanced Patches](https://img.shields.io/badge/ReVanced_Patches-5.47.0-blue?style=flat-square)
 ![Extended Patches](https://img.shields.io/badge/Extended_Patches-5.14.1-blue?style=flat-square)
-![Anddea Patches](https://img.shields.io/badge/Anddea_Patches-3.14.0-blue?style=flat-square)
+![Anddea Patches](https://img.shields.io/badge/Anddea_Patches-3.15.0-blue?style=flat-square)
 
 </div>
 
@@ -49,7 +49,7 @@
 
 #### Anddea
 - **Version:** `20.05.46`
-- **Patches:** `3.14.0`
+- **Patches:** `3.15.0`
 
 **[⬇️ Download rei_YouTube_Anddea_v20.05.46.apk](https://cdn.rei.my.id/revanced/rei_YouTube_Anddea_v20.05.46.apk)**
 
@@ -76,7 +76,7 @@
 
 #### Anddea
 - **Version:** `8.30.54`
-- **Patches:** `3.14.0`
+- **Patches:** `3.15.0`
 
 **[⬇️ Download rei_YoutubeMusic_Anddea_v8.30.54.apk](https://cdn.rei.my.id/revanced/rei_YoutubeMusic_Anddea_v8.30.54.apk)**
 
@@ -152,6 +152,6 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
 **Built with ❤️ | Automatically updated via GitHub Actions**
 
-*Last updated: 2026-01-01T01:26:36Z*
+*Last updated: 2026-01-03T01:15:31Z*
 
 </div>
