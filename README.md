@@ -15,7 +15,7 @@
 [![YouTube Music Extended](https://img.shields.io/badge/YouTube_Music_Extended-8.30.54-ff0000?style=for-the-badge&logo=youtubemusic&logoColor=white)](https://cdn.rei.my.id/revanced/rei_YoutubeMusic_Extended_v8.30.54.apk)
 [![YouTube Music Anddea](https://img.shields.io/badge/YouTube_Music_Anddea-8.30.54-ff0000?style=for-the-badge&logo=youtubemusic&logoColor=white)](https://cdn.rei.my.id/revanced/rei_YoutubeMusic_Anddea_v8.30.54.apk)
 
-![ReVanced Patches](https://img.shields.io/badge/ReVanced_Patches-5.47.0-blue?style=flat-square)
+![ReVanced Patches](https://img.shields.io/badge/ReVanced_Patches-5.48.0-blue?style=flat-square)
 ![Extended Patches](https://img.shields.io/badge/Extended_Patches-5.14.1-blue?style=flat-square)
 ![Anddea Patches](https://img.shields.io/badge/Anddea_Patches-3.15.0-blue?style=flat-square)
 
@@ -33,7 +33,7 @@
 
 #### ReVanced
 - **Version:** `20.14.43`
-- **Patches:** `5.47.0`
+- **Patches:** `5.48.0`
 
 **[⬇️ Download rei_YouTube_v20.14.43.apk](https://cdn.rei.my.id/revanced/rei_YouTube_v20.14.43.apk)**
 
@@ -60,7 +60,7 @@
 
 #### ReVanced
 - **Version:** `8.10.52`
-- **Patches:** `5.47.0`
+- **Patches:** `5.48.0`
 
 **[⬇️ Download rei_YoutubeMusic_v8.10.52.apk](https://cdn.rei.my.id/revanced/rei_YoutubeMusic_v8.10.52.apk)**
 
@@ -152,6 +152,6 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
 **Built with ❤️ | Automatically updated via GitHub Actions**
 
-*Last updated: 2026-01-03T01:15:31Z*
+*Last updated: 2026-01-20T01:20:31Z*
 
 </div>
